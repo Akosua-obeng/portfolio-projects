@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700;800&family=Markazi+Text:wght@400;500&family=Poppins:wght@100;200;300;400;600;700&display=swap');
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1pc;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+}
+nav ul li{
+  text-decoration: dotted;
+  margin: 20px;
+  list-style: none;
+}
+nav ul li .link{
+  text-decoration: none;
+  margin: 0px;
+  color: black;
+  font-family: 'Karla, sans-serif';
+}
+
+.mainSection{
+  background-color: #495e57;
+  display: flex;
+}
+.mainSection article h1{
+  color: #f4ce14;
+  font-family: 'Markazi Text, serif';
+  font-size: 64pt;
+  font-weight: 500;
+}
+.mainSection article h2{
+  color: #edefee;
+  font-family: 'Markazi Text, serif';
+  font-size: 40pt;
+  font-weight: 400;
+}
+.mainSection article p{
+  color: #edefee;
+  font-family: 'Karla Text, sans-serif';
+  font-size: 16pt;
+  font-weight: 400;
+}
+.reserveBtn{
+  background-color: #f4ce14;
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  border-style: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.mainSection aside img{
+  margin-top: 2.5pc;
+  border-radius: 16px;
+  margin-left: 20pc;
+}
+
+.specials{
+  margin-left: 11pc;
+}
+.specials div{
+  margin-left: 11pc;
+  margin-top: pc;
+}
+.specials div h2{
+  margin-top: 5pc;
+  font-family: 'karla, sans-serif';
+  font-weight: 600;
+  font-size: 20pt;
+}
+.specials div button{
+  margin-left: 32pc;
+}
+
+.mainSectionTwo{
+  display: flex;
+  margin-left: 15pc;
+  margin-top: 3pc;
+}
+.mainSectionTwo article{
+  flex: 0.2;
+  margin-left: 2pc;
+}
+.mainSectionTwo article img{
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  height: 167px;
+  width: 250px;
+}
+.mainSectionTwo h4{
+  font-family: 'karla, sans-serif';
+  font-weight: 600;
+  font-size: 16pt;
+}
+.mainSectionTwo h4 span{
+  margin-left: 2pc;
+  color: #ee9972;
+  font-weight: 300;
+}
+.mainSectionTwo p{
+  font-family: 'karla, sans-serif';
+}
+
+.mainSectionThree{
+  background: #495e57;
+}
+.mainSectionThree h4{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'karla, sans-serif';
+  font-weight: 700;
+  font-size: 20pt;
+}
+.mainSectionThree section{
+  display: flex;
+  margin-left: 3pc;
+}
+.mainSectionThree section article{
+  flex: 0.15;
+  margin-left: 3pc;
+  background: #edefee;
+  margin-bottom: 3pc;
+}
+.mainSectionThree section article i{
+  color: gold;
+}
+.mainSectionFour{
+  display: flex;
+}
+.mainSectionFour article{
+  margin-left: 5pc;
+}
+.mainSectionFour h1{
+  font-family: 'Markazi Text, serif';
+  font-weight: 500;
+  font-size: 64pt;
+  color: #495e57;
+}
+.mainSectionFour h2{
+  font-family: 'Markazi Text, serif';
+  font-weight: 500;
+  font-size: 40pt;
+  color: #f4ce14;
+}
+.mainSectionFour p{
+  font-family: 'Karla Text, sans-serif';
+  font-size: 16pt;
+  font-weight: 400;
+  color: #333333;
+}
+.mainSectionFour div{
+  position: relative;
+  margin-left: 15pc;
+  margin-top: 5pc;
+}
+.MA{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.MA-two{
+  position: absolute;
+  top: 10pc;
+  left: -12pc;
+  z-index: 2;
+}
+
+footer{
+  background: #495e57;
+}
+footer img{
+  margin: 3pc;
+}
+footer div{
+  margin-left: 5pc;
+}
+footer section{
+  display: flex;
+}
+footer section article{
+  margin-left: 15pc;
+}

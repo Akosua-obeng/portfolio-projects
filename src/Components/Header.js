@@ -1,9 +1,15 @@
 import logo from "../assets/logo.png";
+import Nav from "../Components/Nav.js";
+import "./Compo.css";
+
 function Header(){
   return(
-    <header>
-      <img src={logo} alt="logo"/>
-    </header>
+    <>
+      <header>
+        <img src={logo} alt="logo"/>
+        <Nav/>
+      </header>
+    </>
   )
 };
 
