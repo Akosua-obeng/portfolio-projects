@@ -3,8 +3,13 @@
 header{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   margin-bottom: 1pc;
+}
+
+.logo{
+  width: 200px;
+  height: auto;
 }
 
 nav ul{
@@ -23,11 +28,16 @@ nav ul li .link{
   margin: 0px;
   color: black;
   font-family: 'Karla, sans-serif';
+  font-size: 12px;
 }
 
 .mainSection{
   background-color: #495e57;
   display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.mainSection article{
 }
 .mainSection article h1{
   color: #f4ce14;
@@ -44,7 +54,7 @@ nav ul li .link{
 .mainSection article p{
   color: #edefee;
   font-family: 'Karla Text, sans-serif';
-  font-size: 16pt;
+  font-size: 12pt;
   font-weight: 400;
 }
 .reserveBtn{
@@ -106,13 +116,19 @@ nav ul li .link{
 }
 .mainSectionTwo p{
   font-family: 'karla, sans-serif';
+  font-size: 12pt;
 }
 
 .mainSectionThree{
   background: #495e57;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .mainSectionThree h4{
   display: flex;
+  color: #f4ce14;
   align-items: center;
   justify-content: center;
   font-family: 'karla, sans-serif';
@@ -121,16 +137,21 @@ nav ul li .link{
 }
 .mainSectionThree section{
   display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: 3pc;
 }
 .mainSectionThree section article{
   flex: 0.15;
   margin-left: 3pc;
+  width: 100px;
+  height: auto;
   background: #edefee;
   margin-bottom: 3pc;
 }
-.mainSectionThree section article i{
-  color: gold;
+.mainSectionThree section article img{
+  width: 100px;
+  height: 100px;
 }
 .mainSectionFour{
   display: flex;
@@ -152,7 +173,7 @@ nav ul li .link{
 }
 .mainSectionFour p{
   font-family: 'Karla Text, sans-serif';
-  font-size: 16pt;
+  font-size: 12pt;
   font-weight: 400;
   color: #333333;
 }
@@ -176,6 +197,7 @@ nav ul li .link{
 
 footer{
   background: #495e57;
+  margin-top: 3pc;
 }
 footer img{
   margin: 3pc;

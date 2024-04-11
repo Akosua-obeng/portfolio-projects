@@ -1,6 +1,6 @@
-import { Route, Routes,} from "react-router-dom";
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import googleFonts from "google-fonts";
+import "./Compo.css";
 
 function Nav(){
 
@@ -15,12 +15,12 @@ function Nav(){
   return(
     <nav>
       <ul>
-        <li><Link to="/" className="link">HOME</Link></li>
-        <li><Link to="/About" className="link">ABOUT</Link></li>
-        <li><Link to="/Menu" className="link">MENU</Link></li>
-        <li><Link to="/Reservation" className="link">RESERVATION</Link></li>
-        <li><Link to="/Online Order" className="link">ONLINE ORDER</Link></li>
-        <li><Link to="Login" className="link">LOGIN</Link></li>
+        <li><NavLink to="/" className="link">HOME</NavLink></li>
+        <li><NavLink to="/About" className="link">ABOUT</NavLink></li>
+        <li><NavLink to="/Menu" className="link">MENU</NavLink></li>
+        {/* <li><NavLink to="/Reservation" className="link">RESERVATION</NavLink></li>
+        <li><NavLink to="/Online Order" className="link">ONLINE ORDER</NavLink></li>
+        <li><NavLink to="Login" className="link">LOGIN</NavLink></li> */}
       </ul>
     </nav>
   );

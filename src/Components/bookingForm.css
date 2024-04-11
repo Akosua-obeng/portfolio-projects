@@ -1,0 +1,40 @@
+.heading{
+  text-align: center;
+}
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* background: #495e57; */
+}
+
+.right-col{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  /* border: 0.5px red solid; */
+}
+
+form div{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1pc;
+  width: 100%;
+}
+
+input{
+  width: 25vw;
+  height: 5vh;
+  border-radius: 8px;
+  border-style: none;
+  background-color: #edefee;
+}
+select{
+  height: 5vh;
+  border-radius: 8px;
+  background-color: #edefee;
+  border-style: none;
+}
