@@ -1,38 +1,45 @@
 import { useEffect, useState } from "react";
 import "./bookingForm.css";
 import dinning from "../assets/dinning.png";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 
 const BookingForm = ({availableTimes, dispatch}) => {
-  const [name, setName] = useState('');
-  const [phoneNumber, setPhoneNumber] = useState('');
-  const [email, setEmail] = useState('');
-  const [date, setDate] = useState('');
-  const [guests, setGuests] = useState(1);
-  const [occasion, setOccasion] = useState('');
-  const [availableTime, setAvailableTime] = useState("");
+  // const [name, setName] = useState('');
+  // const [phoneNumber, setPhoneNumber] = useState('');
+  // const [email, setEmail] = useState('');
+  // const [date, setDate] = useState('');
+  // const [guests, setGuests] = useState(1);
+  // const [occasion, setOccasion] = useState('Birthday');
+  // const [availableTime, setAvailableTime] = useState("");
 
-  function setDispatch(value){
-    dispatch({selectedDate: value})
-    setDate(value)
-  }
+  // function setDispatch(value){
+  //   dispatch({selectedDate: value})
+  //   setDate(value)
+  // }
 
-
-  const clearForm = () => {
-    setName('');
-    setPhoneNumber('');
-    setEmail('');
-    setDate('');
-    setGuests(1);
-    setOccasion('');
-  }
+  const validationSchema = Yup.object().shape({
+    name: Yup.string().required("Name is required"),
+    email: Yup.string().email("Invalid email address").required("Email is required"),
+    
+  })
 
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    //Dispatch n action to update times based on selected date
-    alert("");
-    clearForm();
-  }
+  // const clearForm = () => {
+  //   setName('');
+  //   setPhoneNumber('');
+  //   setEmail('');
+  //   setDate('');
+  //   setGuests(1);
+  //   setOccasion('');
+  // }
+
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   alert("Your table has been reserved");
+  //   clearForm();
+  // };
 
   // useEffect(() =>{
   //   console.log("available times", availableTimes)
@@ -44,7 +51,7 @@ const BookingForm = ({availableTimes, dispatch}) => {
       <div data-testid="form-div" class="container">
         
         <div class="right-col">
-          <form onSubmit={handleSubmit}>
+          <form >
             {/* <div>
               <label>
                 Indoor seating
@@ -62,8 +69,8 @@ const BookingForm = ({availableTimes, dispatch}) => {
               <input 
                 type="text" 
                 id="name"
-                value={name}
-                onChange={e => setName(e.target.value)}
+                // value={value.name}
+                // onChange={e => setName(e.target.value)}
               ></input>
             </div>
 
@@ -74,8 +81,8 @@ const BookingForm = ({availableTimes, dispatch}) => {
               <input 
                 type="number" 
                 id="phone"
-                value={phoneNumber}
-                onChange={e => setPhoneNumber(e.target.value)}
+                // value={phoneNumber}
+                // onChange={e => setPhoneNumber(e.target.value)}
               ></input>
             </div>
 
@@ -86,8 +93,8 @@ const BookingForm = ({availableTimes, dispatch}) => {
               <input 
                 type="email" 
                 id="email"
-                value={email}
-                onChange={e => setEmail(e.target.value)}
+                // value={email}
+                // onChange={e => setEmail(e.target.value)}
               ></input>
             </div>
 
@@ -95,18 +102,18 @@ const BookingForm = ({availableTimes, dispatch}) => {
               <label htmlFor="res-date">Choose date</label>
               <input type="date" 
               id="res-date"
-              value={date}
-              onChange={e => 
-                setDispatch(e.target.value)
-              }
+              // value={date}
+              // onChange={e => 
+              //   setDispatch(e.target.value)
+              // }
               ></input>
             </div>
 
             <div>
               <label hmtlFor="res-time">Choose time</label>
               <select id="res-time"
-                value={availableTime}
-                onChange={e => setAvailableTime(e.target.value)}
+                // value={availableTime}
+                // onChange={e => setAvailableTime(e.target.value)}
               >
                 {availableTimes.times.map((time, index) => 
                 <option key={index}>{time}</option>
@@ -121,16 +128,16 @@ const BookingForm = ({availableTimes, dispatch}) => {
                 min="1"
                 max="10"
                 id="guests"
-                value={guests}
-                onChange={e => setGuests(e.target.value)}
+                // value={guests}
+                // onChange={e => setGuests(e.target.value)}
               ></input>
             </div>
 
             <div>
               <label htmlFor="occasion">Occasion</label>
               <select id="occasion"
-                value={occasion}
-                onChange={e => setOccasion(e.target.value)}
+                // value={occasion}
+                // onChange={e => setOccasion(e.target.value)}
               >
                 <option>Birthday</option>
                 <option>Engagement</option>

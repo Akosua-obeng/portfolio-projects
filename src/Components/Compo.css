@@ -120,38 +120,58 @@ nav ul li .link{
 }
 
 .mainSectionThree{
-  background: #495e57;
+  margin-top: 6pc;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.mainSectionThree h4{
-  display: flex;
-  color: #f4ce14;
-  align-items: center;
-  justify-content: center;
-  font-family: 'karla, sans-serif';
-  font-weight: 700;
-  font-size: 20pt;
-}
 .mainSectionThree section{
+  background-image: url('../assets/serving.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-left: 3pc;
+  justify-content: flex-end;
 }
 .mainSectionThree section article{
-  flex: 0.15;
-  margin-left: 3pc;
-  width: 100px;
-  height: auto;
-  background: #edefee;
-  margin-bottom: 3pc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25vw;
+  background: white;
+  height: 80vh;
+  border-radius: 8px;
+  margin-right: 2pc;
 }
-.mainSectionThree section article img{
-  width: 100px;
-  height: 100px;
+.mainSectionThree section div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.mainSectionThree section div h1{
+  font-size: 30pt;
+  font-style:'Markazi Text, serif';
+}
+.mainSectionThree section div button{
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  border-style: none;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: #f4ce14;
+}
+.mainSectionThree section div button:hover{
+  background-color: transparent;
+  border: 2px solid #f4ce14;
+  background: black;
+  color: #f4ce14;
 }
 .mainSectionFour{
   display: flex;

@@ -11,6 +11,7 @@ import people4 from "../assets/people(4).png"
 import MA from "../assets/MA.png"
 import MA2 from "../assets/MA(2).png"
 import bike from "../assets/bike.png"
+import { Link } from 'react-router-dom';
 import "../Components/Compo.css";
 
 import Main from "../Components/Main";
@@ -22,8 +23,14 @@ function Home(){
           <h1 className="little-lemon">Little Lemon</h1>
           <h2 className="location">Chicago</h2>
           <p>We are a family owned<br/> Mediterranean restraunt,<br/> 
-            focused on traditional recipes <br/>served with a modern twist</p>
-          <button className="reserveBtn">Reserve a table</button>
+            focused on traditional recipes <br/>served with a modern twist
+          </p>
+          <Link to="/Reservation">
+            <button className="reserveBtn">
+              Reserve a table
+            </button>
+          </Link>
+
         </article>
         <aside>
           <img src={chef1} alt=""/>
@@ -63,45 +70,20 @@ function Home(){
           and rosemary croutons. <span><i className="fa fa-motorcycle"></i></span></p>
         </article>
       </section>
+
       <div className="mainSectionThree">
-        <h4>TESTIMONIALS</h4>
-        <section className="slider">
-          <div className="slides">
-            <article>
-              <div>
-                <img src={people1} alt="img"/>
-                <p>Name</p>
-              </div>
-              <p>Review</p>
-            </article>
-            <article>
-              <div>
-                <img src={people2} alt="img"/>
-                <p>Name</p>
-              </div>
-              <p>Review</p>
-            </article>
-            <article>
-              <div>
-                <img src={people3} alt="img"/>
-                <p>Name</p>
-              </div>
-              <p>Review</p>
-            </article>
-            <article>
-              <div>
-                <img src={people4} alt="img"/>
-                <p>Name</p>
-              </div>
-              <p>Review</p>
-            </article>
-          </div>
+        <section>
           <div>
             <article>
-              <button>
-                RESERVATION
-              </button>
+              <h1>WANT TO BOOK A TABLE?</h1>
+              <p>We'd love to host you</p>
+              <Link to="/Reservation">
+                <button>
+                  INQUIRE NOW
+                </button>
+              </Link>
             </article>
+
           </div>
         </section>
       </div>

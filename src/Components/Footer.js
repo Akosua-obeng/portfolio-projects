@@ -7,17 +7,7 @@ function Footer(){
       display:"flex"
     }}>
       <img src={footerlogo} alt="footerlogo"/>
-      <div>
-        <h3>Doormat navigation</h3>
-        <ul>
-          <li><NavLink to="/" className="link">HOME</NavLink></li>
-          <li><NavLink to="/About" className="link">ABOUT</NavLink></li>
-          <li><NavLink to="/Menu" className="link">MENU</NavLink></li>
-          <li><NavLink to="/Reservation" className="link">RESERVATION</NavLink></li>
-          <li><NavLink to="/Online Order" className="link">ONLINE ORDER</NavLink></li>
-          <li><NavLink to="Login" className="link">LOGIN</NavLink></li>
-        </ul>
-      </div>
+
       <section>
         <article>
           <h3>Contact</h3>
