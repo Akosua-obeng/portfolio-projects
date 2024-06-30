@@ -5,50 +5,35 @@
 }
 
 /* .Section{
+  
   position: relative;
-  animation: animate 10s ease-in-out infinite;
-  /* animation: animate 20s ease-in-out infinite; */
-  /* width: 100%;
-  height: 80vh; 
-  background-size: cover;
-  background-repeat: no-repeat;
-} */ 
-/* @keyframes animate{
-  0%,100%{
-    background-image: url(bookingpageAssets/dinning.png);
-  }
-  25%{
-    background-image: url(bookingpageAssets/image\ \(10\).png);
-  }
-  50%{
-    background-image: url(bookingpageAssets/image\ \(9\).png);
-  }
-  75%{
-    background-image: url(bookingpageAssets/MA.png);
-  }
-} */
-
-/* .left-col{
-  flex: 0.4;
-}
-
-.right-col{
-  flex: 0.5;
-} */ 
-
-.Section{
-  background-color: #495e57;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 50vh;
-}
-.Section article h1{
-  color: #f4ce14;
+  height: 25%;
+  overflow: hidden;
+  
+} */
+.Section article h3{
+  color: #edefee;
   font-family: 'Markazi Text, serif';
-  font-size: 50pt;
+  font-size: 64px;
   font-weight: 500;
+  filter: brightness(100%);
+  position: relative;
+  z-index: 1;
 }
+.Section {
+  content: "";
+  width: 100%;
+  height: 50vh;
+  background-image: url('../assets/dinning.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(75%);
+  z-index: -1;
+}
+
 .Section article h2{
   color: #edefee;
   font-family: 'Markazi Text, serif';

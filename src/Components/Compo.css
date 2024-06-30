@@ -3,13 +3,14 @@
 header{
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 1pc;
 }
 
 .logo{
   width: 200px;
   height: auto;
+  margin-left: 8.5pc;
 }
 
 nav ul{
@@ -17,6 +18,7 @@ nav ul{
   justify-content: space-around;
   align-items: center;
   text-decoration: none;
+  margin-right: 8.5pc;
 }
 nav ul li{
   text-decoration: dotted;
@@ -37,12 +39,11 @@ nav ul li .link{
   align-items: center;
   justify-content: space-around;
 }
-.mainSection article{
-}
+
 .mainSection article h1{
   color: #f4ce14;
   font-family: 'Markazi Text, serif';
-  font-size: 64pt;
+  font-size: 64px;
   font-weight: 500;
 }
 .mainSection article h2{
@@ -72,9 +73,9 @@ nav ul li .link{
   margin-left: 20pc;
 }
 
-.specials{
+/* .specials{
   margin-left: 11pc;
-}
+} */
 .specials div{
   margin-left: 11pc;
   margin-top: pc;
@@ -91,12 +92,16 @@ nav ul li .link{
 
 .mainSectionTwo{
   display: flex;
-  margin-left: 15pc;
+  justify-content: space-around;
+  align-items: center;
   margin-top: 3pc;
+  margin-left: 75px;
+  margin-right: 105px;
+  justify-content: space-around;
 }
 .mainSectionTwo article{
-  flex: 0.2;
-  margin-left: 2pc;
+  flex: 0.33;
+  margin-left: 5pc;
 }
 .mainSectionTwo article img{
   border-top-left-radius: 16px;
@@ -120,69 +125,59 @@ nav ul li .link{
 }
 
 .mainSectionThree{
+  background-color: #495e57;
   margin-top: 6pc;
-  background-size: cover;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-bottom: 7pc;
 }
-.mainSectionThree section{
-  background-image: url('../assets/serving.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
+.mainSectionThree h1{
+  color: #f4ce14;
+  margin-top: 3pc;
+  font-size: 48px;
+  font-family: 'Markazi Text, serif';
 }
-.mainSectionThree section article{
+.testimonial{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 25vw;
-  background: white;
-  height: 80vh;
-  border-radius: 8px;
-  margin-right: 2pc;
+  margin-bottom: 3pc;
 }
-.mainSectionThree section div{
+.testimonial div{
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  margin-bottom: 3pc;
+  margin-top: 3pc;
 }
-.mainSectionThree section div h1{
-  font-size: 30pt;
-  font-style:'Markazi Text, serif';
+.testimonial div article{
+  background: linear-gradient(to bottom, yellow, #495e57);
+  flex: 0.2;
+  width: 18vw;
+  margin-right: 1.5pc;
+  border-radius: 10%;
 }
-.mainSectionThree section div button{
-  width: 150px;
-  height: 40px;
-  border-radius: 8px;
-  border-style: none;
-  cursor: pointer;
-  font-weight: 600;
-  background-color: #f4ce14;
+.testimonial div article img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
-.mainSectionThree section div button:hover{
-  background-color: transparent;
-  border: 2px solid #f4ce14;
-  background: black;
+.icon{
   color: #f4ce14;
 }
+
 .mainSectionFour{
   display: flex;
 }
 .mainSectionFour article{
-  margin-left: 5pc;
+  margin-left: 12pc;
 }
 .mainSectionFour h1{
   font-family: 'Markazi Text, serif';
   font-weight: 500;
-  font-size: 64pt;
+  font-size: 64px;
   color: #495e57;
 }
 .mainSectionFour h2{
@@ -200,7 +195,7 @@ nav ul li .link{
 .mainSectionFour div{
   position: relative;
   margin-left: 15pc;
-  margin-top: 5pc;
+  /* margin-top: 5pc; */
 }
 .MA{
   position: absolute;
@@ -215,9 +210,109 @@ nav ul li .link{
   z-index: 2;
 }
 
-footer{
-  background: #495e57;
+/* ABOUT PAGE */
+
+.background-img{
+  background-image: linear-gradient(0deg, rgba(46, 41, 31, 0.5), rgba(46, 41, 31, 0.5)), url(../assets/MA.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+.abt-heading{
+  color: #edefee;
+  font-size: 64pt;
+  font-family: 'Markazi Text, serif';
+}
+.abt-p{
+  text-align: center;
+  text-wrap: wrap;
+  margin-top: 10pc;
+  margin-bottom: 10pc;
+  font-family: "karla, sans-serif";
+}
+.abt-p p{
+  text-align: center;
+  padding-left: 10pc;
+  padding-right: 10pc;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+/* MENU PAGE */
+.menu-background{
+  background-image: linear-gradient(0deg, rgba(46, 41, 31, 0.5), rgba(46, 41, 31, 0.5)), url(../assets/bruschetta.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
+}
+.menu-background h1{
+  margin-left: 10pc;
+  color: #edefee;
+  font-family: 'markazi';
+  font-size: 64px;
+}
+.menu-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin-top: 3pc;
+  margin-bottom: 3pc;
+}
+.menu-content h2{
+  font-family: 'Markazi, sans-serif';
+  font-size: 32px;
+}
+.menu-content p{
+  padding-left: 15pc;
+  padding-right: 15pc;
+  color: #363636;
+  text-align: center;
+  font-family: 'markazi';
+  font-size: 18px;
+  line-height: 25px;
+}
+.menu-articles{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-family: 'karla';
+}
+.menu-articles article{
+  flex: 0.3;
+  margin-top: 4pc;
+}
+.menu-articles article div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-articles img{
+  width: 359px;
+  height: 240px;
+}
+.menu-articles p{
+  color: #FBDABB;
+  margin-right: 5pc;
+}
+
+/* FOOTER */
+footer{
+  align-items: center;
+  justify-content: space-around;
+  background: #495e57;
+  margin-top: 6pc;
 }
 footer img{
   margin: 3pc;
@@ -230,4 +325,358 @@ footer section{
 }
 footer section article{
   margin-left: 15pc;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {background: red;}
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {background: green;}
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .example {background: blue;}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body{background: orange;}
+  @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700;800&family=Markazi+Text:wght@400;500&family=Poppins:wght@100;200;300;400;600;700&display=swap');
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1pc;
+}
+
+.logo{
+  width: 200px;
+  height: auto;
+  margin-left: 8.5pc;
+}
+
+nav ul{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+  margin-right: 8.5pc;
+}
+nav ul li{
+  text-decoration: dotted;
+  margin: 20px;
+  list-style: none;
+}
+nav ul li .link{
+  text-decoration: none;
+  margin: 0px;
+  color: black;
+  font-family: 'Karla, sans-serif';
+  font-size: 12px;
+}
+
+.mainSection{
+  background-color: #495e57;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.mainSection article h1{
+  color: #f4ce14;
+  font-family: 'Markazi Text, serif';
+  font-size: 64px;
+  font-weight: 500;
+}
+.mainSection article h2{
+  color: #edefee;
+  font-family: 'Markazi Text, serif';
+  font-size: 40pt;
+  font-weight: 400;
+}
+.mainSection article p{
+  color: #edefee;
+  font-family: 'Karla Text, sans-serif';
+  font-size: 12pt;
+  font-weight: 400;
+}
+.reserveBtn{
+  background-color: #f4ce14;
+  width: 150px;
+  height: 40px;
+  border-radius: 8px;
+  border-style: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.mainSection article img{
+  margin-top: 2.5pc;
+  border-radius: 16px;
+  margin-left: 20pc;
+}
+
+/* .specials{
+  margin-left: 11pc;
+} */
+.specials div{
+  margin-left: 11pc;
+  margin-top: pc;
+}
+.specials div h2{
+  margin-top: 5pc;
+  font-family: 'karla, sans-serif';
+  font-weight: 600;
+  font-size: 20pt;
+}
+.specials div button{
+  margin-left: 32pc;
+}
+
+.mainSectionTwo{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 3pc;
+  margin-left: 75px;
+  margin-right: 105px;
+  justify-content: space-around;
+}
+.mainSectionTwo article{
+  flex: 0.33;
+  margin-left: 5pc;
+}
+.mainSectionTwo article img{
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  height: 167px;
+  width: 250px;
+}
+.mainSectionTwo h4{
+  font-family: 'karla, sans-serif';
+  font-weight: 600;
+  font-size: 16pt;
+}
+.mainSectionTwo h4 span{
+  margin-left: 2pc;
+  color: #ee9972;
+  font-weight: 300;
+}
+.mainSectionTwo p{
+  font-family: 'karla, sans-serif';
+  font-size: 12pt;
+}
+
+.mainSectionThree{
+  background-color: #495e57;
+  margin-top: 6pc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 7pc;
+}
+.mainSectionThree h1{
+  color: #f4ce14;
+  margin-top: 3pc;
+  font-size: 48px;
+  font-family: 'Markazi Text, serif';
+}
+.testimonial{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3pc;
+}
+.testimonial div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3pc;
+  margin-top: 3pc;
+}
+.testimonial div article{
+  background: linear-gradient(to bottom, yellow, #495e57);
+  flex: 0.2;
+  width: 18vw;
+  margin-right: 1.5pc;
+  border-radius: 10%;
+}
+.testimonial div article img{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.icon{
+  color: #f4ce14;
+}
+
+.mainSectionFour{
+  display: flex;
+}
+.mainSectionFour article{
+  margin-left: 12pc;
+}
+.mainSectionFour h1{
+  font-family: 'Markazi Text, serif';
+  font-weight: 500;
+  font-size: 64px;
+  color: #495e57;
+}
+.mainSectionFour h2{
+  font-family: 'Markazi Text, serif';
+  font-weight: 500;
+  font-size: 40pt;
+  color: #f4ce14;
+}
+.mainSectionFour p{
+  font-family: 'Karla Text, sans-serif';
+  font-size: 12pt;
+  font-weight: 400;
+  color: #333333;
+}
+.mainSectionFour div{
+  position: relative;
+  margin-left: 15pc;
+  /* margin-top: 5pc; */
+}
+.MA{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.MA-two{
+  position: absolute;
+  top: 10pc;
+  left: -12pc;
+  z-index: 2;
+}
+
+/* ABOUT PAGE */
+
+.background-img{
+  background-image: linear-gradient(0deg, rgba(46, 41, 31, 0.5), rgba(46, 41, 31, 0.5)), url(../assets/MA.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+}
+.abt-heading{
+  color: #edefee;
+  font-size: 64pt;
+  font-family: 'Markazi Text, serif';
+}
+.abt-p{
+  text-align: center;
+  text-wrap: wrap;
+  margin-top: 10pc;
+  margin-bottom: 10pc;
+  font-family: "karla, sans-serif";
+}
+.abt-p p{
+  text-align: center;
+  padding-left: 10pc;
+  padding-right: 10pc;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+/* MENU PAGE */
+.menu-background{
+  background-image: linear-gradient(0deg, rgba(46, 41, 31, 0.5), rgba(46, 41, 31, 0.5)), url(../assets/bruschetta.png);
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-size: cover;
+  background-position: center;
+}
+.menu-background h1{
+  margin-left: 10pc;
+  color: #edefee;
+  font-family: 'markazi';
+  font-size: 64px;
+}
+.menu-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3pc;
+  margin-bottom: 3pc;
+}
+.menu-content h2{
+  font-family: 'Markazi, sans-serif';
+  font-size: 32px;
+}
+.menu-content p{
+  padding-left: 15pc;
+  padding-right: 15pc;
+  color: #363636;
+  text-align: center;
+  font-family: 'markazi';
+  font-size: 18px;
+  line-height: 25px;
+}
+.menu-articles{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  font-family: 'karla';
+}
+.menu-articles article{
+  flex: 0.3;
+  margin-top: 4pc;
+}
+.menu-articles article div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-articles img{
+  width: 359px;
+  height: 240px;
+}
+.menu-articles p{
+  color: #FBDABB;
+  margin-right: 5pc;
+}
+
+/* FOOTER */
+footer{
+  align-items: center;
+  justify-content: space-around;
+  background: #495e57;
+  margin-top: 6pc;
+}
+footer img{
+  margin: 3pc;
+}
+footer div{
+  margin-left: 5pc;
+}
+footer section{
+  display: flex;
+}
+footer section article{
+  margin-left: 15pc;
+}
+
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {background: pink;}
 }

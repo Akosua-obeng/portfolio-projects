@@ -17,12 +17,25 @@
   flex: 1;
   /* border: 0.5px red solid; */
 }
-
-form div{
+.right-col h3{
+  
+}
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 2pc;
+}
+form div {
   display: flex;
   flex-direction: column;
   margin-bottom: 1pc;
   width: 100%;
+}
+form div div{
+  display: flex;
+  flex-direction: column;
 }
 
 input{
@@ -39,10 +52,4 @@ select{
   border-style: none;
 }
 
-option{
-  border-bottom: ;
-}
 
-.submit{
-
-}

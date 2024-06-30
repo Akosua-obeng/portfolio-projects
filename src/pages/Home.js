@@ -13,13 +13,16 @@ import MA2 from "../assets/MA(2).png"
 import bike from "../assets/bike.png"
 import { Link } from 'react-router-dom';
 import "../Components/Compo.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+
 
 import Main from "../Components/Main";
 function Home(){
   return(
     <>
       <section className="mainSection"  >
-        <article style={{marginLeft:"5pc"}}>
+        <article style={{marginLeft:"10pc"}}>
           <h1 className="little-lemon">Little Lemon</h1>
           <h2 className="location">Chicago</h2>
           <p>We are a family owned<br/> Mediterranean restraunt,<br/> 
@@ -32,9 +35,9 @@ function Home(){
           </Link>
 
         </article>
-        <aside>
+        <article style={{marginRight:"150px"}}>
           <img src={chef1} alt=""/>
-        </aside>
+        </article>
       </section>
       <div className="specials">
         <div>
@@ -73,16 +76,36 @@ function Home(){
 
       <div className="mainSectionThree">
         <section>
-          <div>
-            <article>
-              <h1>WANT TO BOOK A TABLE?</h1>
-              <p>We'd love to host you</p>
-              <Link to="/Reservation">
-                <button>
-                  INQUIRE NOW
-                </button>
-              </Link>
-            </article>
+          <div className="testimonial">
+            <h1>
+              Testimonials
+            </h1>
+            <div>
+              <article>
+                <img src={people1} alt="customer"/>
+                <p>Maria</p>
+                <p>"The food is good"</p>
+                <p><FontAwesomeIcon icon={faStar} className="icon"/><FontAwesomeIcon icon={faStar} className="icon"/><FontAwesomeIcon icon={faStar} className="icon"/> </p>
+              </article>
+              <article>
+                <img src={people2} alt="customer"/>
+                <p>Maria</p>
+                <p>"The food is good"</p>
+                <p><FontAwesomeIcon icon={faStar} className="icon"/><FontAwesomeIcon icon={faStar} className="icon"/><FontAwesomeIcon icon={faStar} className="icon"/><FontAwesomeIcon icon={faStar} className="icon"/></p>
+              </article>
+              <article>
+                <img src={people3} alt="customer"/>
+                <p>Maria</p>
+                <p>"The food is good"</p>
+                <p><FontAwesomeIcon icon={faStar} className="icon"/><FontAwesomeIcon icon={faStar} className="icon"/><FontAwesomeIcon icon={faStar} className="icon"/><FontAwesomeIcon icon={faStar} className="icon"/><FontAwesomeIcon icon={faStar} className="icon" /></p>
+              </article>
+              <article>
+                <img src={people4} alt="customer"/>
+                <p>Maria</p>
+                <p>"The food is good"</p>
+                <p><FontAwesomeIcon icon={faStar} className="icon"/><FontAwesomeIcon icon={faStar} className="icon"/><FontAwesomeIcon icon={faStar} className="icon"/></p>
+              </article>
+            </div>
 
           </div>
         </section>
