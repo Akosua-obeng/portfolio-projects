@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "plan": "Free Plan",
+        "detail": "Build and test using our core set of products with up to 100 API requests ",
+        "price": "$0.00",
+        "transaction": true,
+        "auth": true,
+        "identity":true,
+        "investments": false,
+        "assets": false,
+        "liabilities": false,
+        "income": false
+    },
+    {
+        "id": 2,
+        "plan": "Basic Plan",
+        "detail": "Launch your project with unlimited requests and no contractual minimums",
+        "price": "$249.00",
+        "transaction": true,
+        "auth": true,
+        "identity":true,
+        "investments": true,
+        "assets": true,
+        "liabilities": false,
+        "income": false
+    },
+    {
+        "id": 3,
+        "plan": "Premium Plan",
+        "detail": "Get tailored solutions, volume pricing, and dedicated support for your team",
+        "price": "$499.00",
+        "transaction": true,
+        "auth": true,
+        "identity":true,
+        "investments": true,
+        "assets": true,
+        "liabilities": true,
+        "income": true
+    }
+]

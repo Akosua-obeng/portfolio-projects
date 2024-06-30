@@ -1,0 +1,233 @@
+.pricing-heading{
+    margin-left: 14vw;
+    margin-top: 2pc;
+    margin-bottom: 2pc;
+    h1{
+        font-family: "DM Serif Display", serif;
+        font-size: 56px;
+        color: #36536B;
+      }
+}
+
+.pricing{
+    display: flex;
+    align-items: center;
+    margin-left: 14vw;
+    margin-top: 2pc;
+
+    article{
+        flex: 0.3;
+        margin-left: 1pc;
+        h3{
+            color: #BA4270;
+            font-size: 32PX;
+            font-family: "DM Serif Display", serif;
+        }
+        .details{
+            color: #6C8294;
+            font-size: 15px;
+            font-family: "Public Sans";
+        }
+        .price{
+            color: #36536B;
+            font-size: 56px;
+            font-family: "DM Serif Display", serif;
+        }
+        .details-container{
+            border-bottom: 0.2px solid grey;
+            border-top: 0.2px solid grey;
+
+            div{
+                display: flex;
+                margin-bottom: 0.5pc;
+                img{
+                    height: 14px;
+                    width: 14px;
+                }
+                p{
+                    margin-left: 1pc;
+                    font-size: 16px;
+                    font-family: 'Public Sans';
+                    color: #36536B;
+                }
+            }
+            div:nth-child(1){
+                margin-top: 2pc;
+            }
+            div:nth-child(7){
+                margin-bottom: 2pc;
+            }
+            .inactive-p{
+                p{
+                    margin-left: 2pc;
+                }
+            }
+        }
+
+        button{
+            margin-top: 1.5pc;
+            width: 168px;
+            height: 48px;
+            color: #36536B;
+            font-size: 15px;
+            background: transparent;
+            border-radius: 25px;
+            border: 0.5px solid #36536B;
+        }
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    // body {background: red;}
+    
+    .pricing-heading {
+        margin-left: 0;
+        margin-top: 2pc;
+        margin-bottom: 2pc;
+    }
+    .pricing {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+        margin-top: 2pc;
+        text-align: center;
+
+        article{
+            margin-bottom: 3pc;
+
+            .details-container{
+                display: flex;
+                flex-direction: column;
+                div{
+                    margin-left: 30vw;
+                }
+            }
+        }
+    }
+    pricing-heading {
+        /* margin-left: 14vw; */
+        margin-top: 2pc;
+        margin-bottom: 2pc;
+    }
+  }
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .example {background: green;}
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
+    // .body {background: blue;}
+    .pricing {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0; 
+        margin-top: 2pc;
+    }
+    .pricing-heading {
+        margin-left: 0;
+        margin-top: 2pc;
+        margin-bottom: 2pc;
+    }
+  } 
+  
+  /* Large devices (laptops/desktops, 992px and up) */
+  @media only screen and (min-width: 992px) {
+    
+    
+    .pricing-heading {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        /* margin-left: 14vw; */
+        padding-right: 55pc;
+        margin-top: 2pc;
+        margin-bottom: 2pc;
+        h1{
+            font-family: "DM Serif Display", serif;
+            font-size: 56px;
+            color: #36536B;
+          }
+    }
+    
+    .pricing{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 5pc;
+        padding-right: 5pc;
+        /* margin-left: 14vw; */
+        margin-top: 2pc;
+    
+        article{
+            flex: 0.3;
+            margin-left: 1pc;
+            h3{
+                color: #BA4270;
+                font-size: 32PX;
+                font-family: "DM Serif Display", serif;
+            }
+            .details{
+                color: #6C8294;
+                font-size: 15px;
+                font-family: "Public Sans";
+            }
+            .price{
+                color: #36536B;
+                font-size: 56px;
+                font-family: "DM Serif Display", serif;
+            }
+            .details-container{
+                border-bottom: 0.2px solid grey;
+                border-top: 0.2px solid grey;
+    
+                div{
+                    display: flex;
+                    margin-bottom: 0.5pc;
+                    img{
+                        height: 14px;
+                        width: 14px;
+                    }
+                    p{
+                        margin-left: 1pc;
+                        font-size: 16px;
+                        font-family: 'Public Sans';
+                        color: #36536B;
+                    }
+                }
+                div:nth-child(1){
+                    margin-top: 2pc;
+                }
+                div:nth-child(7){
+                    margin-bottom: 2pc;
+                }
+                .inactive-p{
+                    p{
+                        margin-left: 2pc;
+                    }
+                }
+            }
+    
+            button{
+                margin-top: 1.5pc;
+                width: 168px;
+                height: 48px;
+                color: #36536B;
+                font-size: 15px;
+                background: transparent;
+                border-radius: 25px;
+                border: 0.5px solid #36536B;
+            }
+        }
+    }
+  } 
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .example {background: pink;}
+  }

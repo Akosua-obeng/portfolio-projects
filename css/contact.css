@@ -1,0 +1,214 @@
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.form-container div:nth-child(1) {
+  flex: 0.3;
+  margin-left: 12vw;
+}
+.form-container div:nth-child(1) form {
+  display: flex;
+  flex-direction: column;
+}
+.form-container div:nth-child(1) form label {
+  font-size: 15px;
+  color: #36536b;
+  font-family: "Public Sans", sans-serif;
+  margin-top: 5vh;
+}
+.form-container div:nth-child(1) form input, .form-container div:nth-child(1) form textarea {
+  background-color: #edf3f8;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 0.5px solid #36536b;
+}
+.form-container div:nth-child(1) form input:focus, .form-container div:nth-child(1) form textarea:focus {
+  border-bottom: 0.5px solid #36536b;
+  outline: none;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 1pc;
+}
+.checkbox input {
+  margin-right: 1pc;
+  cursor: pointer;
+}
+.checkbox input:active {
+  background-color: #Ba4270;
+  color: #ffffff;
+}
+.checkbox p {
+  font-size: 15px;
+  font-family: "Public Sans", sans-serif;
+  color: #36536b;
+}
+
+.submit-btn {
+  margin-top: 1pc;
+  width: 152px;
+  height: 48px;
+  border-radius: 40px;
+  font-size: 15px;
+  color: #36536b;
+  font-family: "Public Sans", sans-serif;
+  border: 0.5px solid #36536b;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #36536b;
+  color: #fbfcfe;
+  transition: 0.8s;
+}
+
+.join {
+  flex: 0.45;
+}
+.join h1 {
+  font-size: 24px;
+  font-family: "DM Serif Display";
+  color: #36536b;
+}
+.join div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.join div img {
+  margin: 1.5pc;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body {
+    overflow-x: hidden;
+    box-sizing: border-box;
+  }
+  .main-container {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+  .main-container .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5vh;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .form-container div:nth-child(1) {
+    flex: 0.3;
+    margin-left: 0;
+    width: 80%;
+  }
+  .join {
+    flex: 0.45;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .join h1 {
+    font-size: 24px;
+    font-family: "DM Serif Display";
+    color: #36536b;
+    text-align: center;
+    margin-top: 2pc;
+  }
+  .join div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .example {
+    background: green;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .form-container div:nth-child(1) {
+    flex: 0.3;
+    margin-left: 0;
+  }
+  .join h1 {
+    font-size: 24px;
+    font-family: "DM Serif Display";
+    text-align: center;
+    color: #36536b;
+  }
+  .join div {
+    margin-left: 2pc;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .heading h1 {
+    font-family: "DM Serif Display", serif;
+    font-size: 56px;
+    color: #36536B;
+    margin-left: 10vw;
+    margin-right: 16vw;
+    text-align: left;
+  }
+  .form-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 8vw;
+    margin-right: 8vw;
+  }
+  .form-container div:nth-child(1) {
+    flex: 0.25;
+    margin-left: 0;
+  }
+  .join {
+    flex: 0.6;
+  }
+  .join div {
+    margin-left: 2pc;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .join h1 {
+    font-size: 24px;
+    font-family: "DM Serif Display";
+    text-align: left;
+    padding-left: 5pc;
+    padding-right: 5pc;
+    color: #36536b;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .example {
+    background: pink;
+  }
+}/*# sourceMappingURL=contact.css.map */

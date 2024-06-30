@@ -1,0 +1,1364 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #edf3f8;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 700px;
+  height: 700px;
+  background-image: url("../assets/shared/desktop/bg-pattern-circle.svg");
+  border-radius: 350px;
+  background-repeat: no-repeat;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  body::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    right: -100px;
+    width: 700px;
+    height: 700px;
+    border-radius: 350px;
+    background-repeat: no-repeat;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.15);
+    -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .main-container .sidebar a {
+    width: 100%;
+    text-decoration: none;
+  }
+  .main-container .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5vh;
+  }
+  .main-container .header-container .logo {
+    flex: 0.4;
+    margin-right: 50vw;
+  }
+  .main-container .header-container .menu-btn {
+    flex: 0.4;
+  }
+  .main-container .header-container .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.15);
+    -webkit-backdrop-filter: blur(12px);
+            backdrop-filter: blur(12px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .main-container .header-container .sidebar a {
+    width: 100%;
+    text-decoration: none;
+  }
+  .main-container .header-container .navigation {
+    display: none;
+  }
+  .main-container .header-container .header-btn {
+    display: none;
+  }
+  .main-container .phone-mockup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+  }
+  .main-container .phone-mockup article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .phone-mockup article div:nth-child(1) h1 {
+    font-size: 32px;
+    color: rgb(54, 83, 107);
+    font-family: "DM Serif Display", serif;
+    text-align: center;
+  }
+  .main-container .phone-mockup article div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .main-container .phone-mockup article div:nth-child(2) input {
+    width: 327px;
+    height: 48px;
+    margin-bottom: 1pc;
+    border-radius: 20px;
+    border-style: none;
+    text-align: center;
+  }
+  .main-container .phone-mockup article div:nth-child(2) input:focus {
+    border-style: none;
+    outline: none;
+  }
+  .main-container .phone-mockup article div:nth-child(2) button {
+    width: 327px;
+    height: 48px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: #BA4270;
+    font-family: "Public Sans", sans-serif;
+    font-size: 15px;
+    color: #edf3f8;
+    cursor: pointer;
+  }
+  .main-container .phone-mockup article p {
+    font-family: "Public Sans", sans-serif;
+    font-size: 15px;
+    color: #6c8294;
+    margin-top: 1pc;
+  }
+  .main-container .partners {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 5vh;
+    background-color: #1b262f;
+  }
+  .main-container .partners div:nth-child(2) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1pc;
+    margin-left: 0.8pc;
+  }
+  .main-container .partners div:nth-child(2) img {
+    margin: 2pc;
+  }
+  .main-container .partners div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-container .partners div:nth-child(1) h1 {
+    font-size: 32px;
+    color: #fbfcfe;
+    font-family: "DM Serif Display", serif;
+    margin-bottom: 1pc;
+  }
+  .main-container .partners div:nth-child(1) p {
+    font-size: 15px;
+    color: #fbfcfe;
+    font-family: "Public Sans";
+    margin-bottom: 1pc;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .main-container .partners div:nth-child(1) button {
+    background: transparent;
+    border: solid 1px #fbfcfe;
+    width: 129px;
+    height: 48px;
+    border-radius: 25px;
+    margin-bottom: 5pc;
+    font-size: 15px;
+    font-family: "Public Sans";
+    color: #fbfcfe;
+  }
+  .main-container .implementation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .implementation article:nth-child(1) img {
+    width: 328px;
+    height: 209px;
+  }
+  .main-container .implementation article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .implementation article h1 {
+    font-size: 32px;
+    color: #36536b;
+    font-family: "DM Serif Display", serif;
+    margin-bottom: 1pc;
+  }
+  .main-container .implementation article p {
+    font-size: 15px;
+    color: #6c8494;
+    font-family: "Public Sans";
+    margin-bottom: 1pc;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 2pc;
+    margin-right: 2pc;
+    line-height: 2em;
+    text-align: center;
+  }
+  .main-container .implementation .simple {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .main-container .implementation .simple article img {
+    width: 328px;
+    height: 290px;
+  }
+  .main-container .implementation .banking article img {
+    width: 106px;
+    height: 106px;
+    margin-bottom: 1pc;
+  }
+  .main-container .implementation .banking article h3 {
+    font-size: 18px;
+    color: #36536B;
+    margin-bottom: 1pc;
+  }
+  .main-container .implementation .banking article p {
+    color: #6C8294;
+    font-size: 15px;
+    margin-bottom: 1pc;
+  }
+  .main-container .implementation .ready {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .implementation .ready h1 {
+    color: #36536B;
+    font-size: 32px;
+    font-family: "DM Serif Display", serif;
+  }
+  .main-container .implementation .ready div {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-container .implementation .ready div input {
+    width: 327px;
+    height: 48px;
+    margin-bottom: 1pc;
+    border-radius: 20px;
+    border-style: none;
+    text-align: center;
+  }
+  .main-container .implementation .ready div input:focus {
+    border-style: none;
+    outline: none;
+  }
+  .main-container .implementation .ready div button {
+    width: 327px;
+    height: 48px;
+    border-radius: 20px;
+    border-style: none;
+    background-color: #BA4270;
+    font-family: "Public Sans", sans-serif;
+    font-size: 15px;
+    color: #edf3f8;
+    cursor: pointer;
+  }
+  .main-container footer {
+    background: #1B262F;
+    margin-top: 2pc;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container footer div {
+    margin-top: 1pc;
+  }
+  .main-container footer div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container footer div div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-container footer div div:nth-child(2) a {
+    color: #FBFCFE;
+    margin-bottom: 2pc;
+    text-decoration: none;
+  }
+  .main-container footer .socials img {
+    margin-right: 2pc;
+    margin-bottom: 2pc;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  body::before {
+    content: "";
+    position: absolute;
+    top: -250px;
+    right: -1px;
+    width: 700px;
+    height: 700px;
+    border-radius: 350px;
+    background-repeat: no-repeat;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1pc;
+  }
+  .main-container .header-container .logo {
+    flex: 0.4;
+    margin-right: 10vw;
+  }
+  .main-container .header-container .menu-btn {
+    display: none;
+  }
+  .main-container .header-container .navigation {
+    display: flex;
+  }
+  .main-container .header-container .navigation div:nth-child(1) {
+    margin-right: 5vw;
+  }
+  .main-container .header-container .navigation div:nth-child(1) a {
+    text-decoration: none;
+    margin-right: 1pc;
+    color: #36536B;
+    font-size: 15px;
+    font-family: "Public Sans";
+  }
+  .main-container .header-container .navigation .header-btn .schedule-btn {
+    width: 173px;
+    height: 48px;
+    border-radius: 25px;
+    background-color: #BA4270;
+    color: #FBFCFE;
+    font-size: 15px;
+    font-family: "Public Sans";
+    border-style: none;
+    cursor: pointer;
+  }
+  .main-container .phone-mockup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+    margin-bottom: 2pc;
+  }
+  .main-container .phone-mockup article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .phone-mockup article div {
+    margin-left: 5pc;
+    margin-right: 5pc;
+  }
+  .main-container .phone-mockup article div h1 {
+    font-size: 48px;
+    color: rgb(54, 83, 107);
+    font-family: "DM Serif Display", serif;
+    text-align: center;
+  }
+  .main-container .phone-mockup article div:nth-child(2) {
+    position: relative;
+    width: 445px;
+    height: 48px;
+  }
+  .main-container .phone-mockup article div:nth-child(2) input {
+    height: 41px;
+    width: 390px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-style: none;
+    text-align: center;
+  }
+  .main-container .phone-mockup article div:nth-child(2) input:focus {
+    outline: none;
+    border-color: transparent;
+  }
+  .main-container .phone-mockup article div:nth-child(2) input::-moz-placeholder {
+    text-align: center;
+  }
+  .main-container .phone-mockup article div:nth-child(2) input::placeholder {
+    text-align: center;
+  }
+  .main-container .phone-mockup article div:nth-child(2) button {
+    width: 178px;
+    height: 42px;
+    border-style: none;
+    background-color: rgb(186, 66, 112);
+    color: white;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+  .main-container .phone-mockup article div:nth-child(2) .schedule-btn:hover {
+    background-color: rgb(218, 109, 151);
+  }
+  .main-container .phone-mockup article p {
+    color: #6c8294;
+    font-size: 15px;
+    font-family: "Public Sans";
+  }
+  .main-container .partners {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: #1B262F;
+  }
+  .main-container .partners div:nth-child(2) {
+    margin-left: 5pc;
+    margin-right: 5pc;
+  }
+  .main-container .partners div:nth-child(2) img {
+    margin-top: 1pc;
+    margin-right: 1.5pc;
+    margin-bottom: 1pc;
+  }
+  .main-container .partners div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .partners div:nth-child(1) h1 {
+    font-size: 48px;
+    font-family: "DM Serif Display";
+    color: #FBFCFE;
+  }
+  .main-container .partners div:nth-child(1) p {
+    font-size: 15px;
+    font-family: "Public Sans";
+    color: #FBFCFE;
+    margin-right: 6.5pc;
+    margin-left: 6.5pc;
+    margin-bottom: 1pc;
+    line-height: 1.5pc;
+    text-align: center;
+  }
+  .main-container .partners button {
+    width: 129px;
+    height: 48px;
+    background: transparent;
+    border: solid 1px #FBFCFE;
+    color: #FBFCFE;
+    font-size: 15px;
+    border-radius: 25px;
+    margin-bottom: 3pc;
+  }
+  .main-container .implementation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .main-container .implementation div:nth-child(1) article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2pc;
+  }
+  .main-container .implementation div:nth-child(1) article img {
+    width: 410px;
+    height: 250px;
+  }
+  .main-container .implementation div:nth-child(1) article h1 {
+    font-size: 48px;
+    color: #36536B;
+    font-family: "DM Serif Display";
+  }
+  .main-container .implementation div:nth-child(1) article p {
+    font-size: 15px;
+    color: #6C8294;
+    font-family: "Public Sans";
+    text-align: center;
+    margin-left: 3pc;
+    margin-right: 3pc;
+    line-height: 1.5pc;
+    margin-bottom: 2pc;
+  }
+  .main-container .implementation .simple {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .implementation .simple article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-container .implementation .simple article img {
+    width: 363px;
+    height: 320px;
+  }
+  .main-container .implementation .simple article h1 {
+    font-size: 48px;
+    color: #36536B;
+    font-family: "DM Serif Display";
+  }
+  .main-container .implementation .simple article p {
+    font-family: "Public Sans";
+    font-size: 15px;
+    color: #6C8294;
+    text-align: center;
+    margin-left: 2pc;
+    margin-right: 2pc;
+    margin-bottom: 2pc;
+    margin-top: 1pc;
+    line-height: 1.5pc;
+  }
+  .main-container .implementation .banking {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .implementation .banking article {
+    display: flex;
+    flex: 0.32;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 1pc;
+  }
+  .main-container .implementation .banking article img {
+    width: 88px;
+    height: 88px;
+    margin-bottom: 1pc;
+  }
+  .main-container .implementation .banking article h3 {
+    font-size: 18px;
+    color: #36536B;
+    font-family: "Public Sans";
+    margin-bottom: 1pc;
+  }
+  .main-container .implementation .banking article p {
+    font-size: 15px;
+    color: #6C8294;
+    font-family: "Public Sans";
+    text-align: center;
+    margin-bottom: 1pc;
+  }
+  .main-container .implementation .ready {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .implementation .ready h1 {
+    font-size: 48px;
+    color: #36536B;
+    font-family: "DM Serif Display";
+  }
+  .main-container .implementation .ready div {
+    position: relative;
+    width: 445px;
+    height: 48px;
+  }
+  .main-container .implementation .ready div input {
+    height: 41px;
+    width: 390px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-style: none;
+    text-align: center;
+  }
+  .main-container .implementation .ready div input:focus {
+    outline: none;
+    border-color: transparent;
+  }
+  .main-container .implementation .ready div input::-moz-placeholder {
+    text-align: center;
+  }
+  .main-container .implementation .ready div input::placeholder {
+    text-align: center;
+  }
+  .main-container .implementation .ready div button {
+    width: 178px;
+    height: 42px;
+    border-style: none;
+    background-color: rgb(186, 66, 112);
+    color: white;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+  .main-container .implementation .ready div .schedule-btn:hover {
+    background-color: rgb(218, 109, 151);
+  }
+  .main-container footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    margin-top: 4pc;
+    background: #1B262F;
+  }
+  .main-container footer div {
+    display: flex;
+    align-items: center;
+    margin-right: 4pc;
+  }
+  .main-container footer div a {
+    text-decoration: none;
+    color: #FBFCFE;
+    font-size: 15px;
+    font-family: "Public Sans";
+    margin-right: 1pc;
+  }
+  .main-container footer div img {
+    margin-right: 1pc;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  body::before {
+    content: "";
+    position: absolute;
+    top: -250px;
+    right: -100px;
+    width: 700px;
+    height: 700px;
+    border-radius: 350px;
+    background-repeat: no-repeat;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3pc;
+  }
+  .main-container .header-container .logo {
+    flex: 0.4;
+    margin-right: 5vw;
+  }
+  .main-container .header-container .menu-btn {
+    display: none;
+  }
+  .main-container .header-container .navigation {
+    display: flex;
+  }
+  .main-container .header-container .navigation div:nth-child(1) {
+    margin-right: 22vw;
+  }
+  .main-container .header-container .navigation div:nth-child(1) a {
+    text-decoration: none;
+    margin-right: 1pc;
+    color: #36536B;
+    font-size: 15px;
+    font-family: "Public Sans";
+  }
+  .main-container .header-container .navigation .header-btn .schedule-btn {
+    width: 173px;
+    height: 48px;
+    border-radius: 25px;
+    background-color: #BA4270;
+    color: #FBFCFE;
+    font-size: 15px;
+    font-family: "Public Sans";
+    border-style: none;
+    cursor: pointer;
+  }
+  .main-container .phone-mockup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 2pc;
+  }
+  .main-container .phone-mockup article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .phone-mockup article div {
+    margin-left: 5pc;
+    margin-right: 5pc;
+  }
+  .main-container .phone-mockup article div h1 {
+    font-size: 48px;
+    color: rgb(54, 83, 107);
+    font-family: "DM Serif Display", serif;
+    text-align: center;
+  }
+  .main-container .phone-mockup article div:nth-child(2) {
+    position: relative;
+    width: 445px;
+    height: 48px;
+  }
+  .main-container .phone-mockup article div:nth-child(2) input {
+    height: 41px;
+    width: 390px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-style: none;
+    text-align: center;
+  }
+  .main-container .phone-mockup article div:nth-child(2) input:focus {
+    outline: none;
+    border-color: transparent;
+  }
+  .main-container .phone-mockup article div:nth-child(2) input::-moz-placeholder {
+    text-align: center;
+  }
+  .main-container .phone-mockup article div:nth-child(2) input::placeholder {
+    text-align: center;
+  }
+  .main-container .phone-mockup article div:nth-child(2) button {
+    width: 178px;
+    height: 42px;
+    border-style: none;
+    background-color: rgb(186, 66, 112);
+    color: white;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+  .main-container .phone-mockup article div:nth-child(2) .schedule-btn:hover {
+    background-color: rgb(218, 109, 151);
+  }
+  .main-container .phone-mockup article p {
+    color: #6c8294;
+    font-size: 15px;
+    font-family: "Public Sans";
+  }
+  .main-container .partners {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #1B262F;
+  }
+  .main-container .partners div:nth-child(2) {
+    margin-left: 1pc;
+    margin-right: 1pc;
+    flex: 0.45;
+  }
+  .main-container .partners div:nth-child(2) img {
+    margin-top: 1pc;
+    margin-right: 1.5pc;
+    margin-bottom: 1pc;
+    width: 129px;
+    height: 17px;
+  }
+  .main-container .partners div:nth-child(1) {
+    display: flex;
+    flex: 0.45;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1pc;
+  }
+  .main-container .partners div:nth-child(1) h1 {
+    font-size: 48px;
+    font-family: "DM Serif Display";
+    color: #FBFCFE;
+  }
+  .main-container .partners div:nth-child(1) p {
+    font-size: 15px;
+    font-family: "Public Sans";
+    color: #FBFCFE;
+    margin-bottom: 1pc;
+    line-height: 1.5pc;
+    text-align: left;
+    margin-right: 0.1pc;
+    margin-left: 0.1pc;
+  }
+  .main-container .partners button {
+    width: 129px;
+    height: 48px;
+    background: transparent;
+    border: solid 1px #FBFCFE;
+    color: #FBFCFE;
+    font-size: 15px;
+    border-radius: 25px;
+    margin-bottom: 3pc;
+  }
+  .main-container .implementation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .main-container .implementation div:nth-child(1) {
+    display: flex;
+  }
+  .main-container .implementation div:nth-child(1) article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 2pc;
+  }
+  .main-container .implementation div:nth-child(1) article img {
+    width: 445px;
+    height: 284px;
+  }
+  .main-container .implementation div:nth-child(1) article h1 {
+    font-size: 48px;
+    color: #36536B;
+    font-family: "DM Serif Display";
+  }
+  .main-container .implementation div:nth-child(1) article p {
+    font-size: 15px;
+    color: #6C8294;
+    font-family: "Public Sans";
+    text-align: center;
+    margin-left: 3pc;
+    margin-right: 3pc;
+    line-height: 1.5pc;
+    margin-bottom: 2pc;
+  }
+  .main-container .implementation .simple {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .implementation .simple article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-container .implementation .simple article img {
+    width: 363px;
+    height: 320px;
+  }
+  .main-container .implementation .simple article h1 {
+    font-size: 48px;
+    color: #36536B;
+    font-family: "DM Serif Display";
+  }
+  .main-container .implementation .simple article p {
+    font-family: "Public Sans";
+    font-size: 15px;
+    color: #6C8294;
+    text-align: center;
+    margin-left: 2pc;
+    margin-right: 2pc;
+    margin-bottom: 2pc;
+    margin-top: 1pc;
+    line-height: 1.5pc;
+  }
+  .main-container .implementation .banking {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .implementation .banking article {
+    display: flex;
+    flex: 0.32;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 1pc;
+  }
+  .main-container .implementation .banking article img {
+    width: 88px;
+    height: 88px;
+    margin-bottom: 1pc;
+  }
+  .main-container .implementation .banking article h3 {
+    font-size: 18px;
+    color: #36536B;
+    font-family: "Public Sans";
+    margin-bottom: 1pc;
+  }
+  .main-container .implementation .banking article p {
+    font-size: 15px;
+    color: #6C8294;
+    font-family: "Public Sans";
+    text-align: center;
+    margin-bottom: 1pc;
+  }
+  .main-container .implementation .ready {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .implementation .ready h1 {
+    font-size: 48px;
+    color: #36536B;
+    font-family: "DM Serif Display";
+  }
+  .main-container .implementation .ready div {
+    position: relative;
+    width: 445px;
+    height: 48px;
+  }
+  .main-container .implementation .ready div input {
+    height: 41px;
+    width: 390px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-style: none;
+    text-align: center;
+  }
+  .main-container .implementation .ready div input:focus {
+    outline: none;
+    border-color: transparent;
+  }
+  .main-container .implementation .ready div input::-moz-placeholder {
+    text-align: center;
+  }
+  .main-container .implementation .ready div input::placeholder {
+    text-align: center;
+  }
+  .main-container .implementation .ready div button {
+    width: 178px;
+    height: 42px;
+    border-style: none;
+    background-color: rgb(186, 66, 112);
+    color: white;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+  .main-container .implementation .ready div .schedule-btn:hover {
+    background-color: rgb(218, 109, 151);
+  }
+  .main-container footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    margin-top: 4pc;
+    background: #1B262F;
+  }
+  .main-container footer div {
+    display: flex;
+    align-items: center;
+    margin-right: 4pc;
+  }
+  .main-container footer div a {
+    text-decoration: none;
+    color: #FBFCFE;
+    font-size: 15px;
+    font-family: "Public Sans";
+    margin-right: 1pc;
+  }
+  .main-container footer div img {
+    margin-right: 1pc;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  body::before {
+    content: "";
+    position: absolute;
+    top: -250px;
+    right: -100px;
+    width: 700px;
+    height: 700px;
+    border-radius: 350px;
+    background-repeat: no-repeat;
+  }
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 3pc;
+  }
+  .main-container .header-container .logo {
+    flex: 0.3;
+  }
+  .main-container .header-container .menu-btn {
+    display: none;
+  }
+  .main-container .header-container .navigation {
+    display: flex;
+    align-items: center;
+  }
+  .main-container .header-container .navigation div:nth-child(1) {
+    margin-left: 2vw;
+    margin-right: 30vw;
+  }
+  .main-container .header-container .navigation div:nth-child(1) a {
+    text-decoration: none;
+    color: #36536B;
+    font-size: 15px;
+    font-family: "Public Sans";
+  }
+  .main-container .header-container .navigation .header-btn .schedule-btn {
+    width: 173px;
+    height: 48px;
+    border-radius: 25px;
+    background-color: #BA4270;
+    color: #FBFCFE;
+    font-size: 15px;
+    font-family: "Public Sans";
+    border-style: none;
+    cursor: pointer;
+  }
+  .main-container .phone-mockup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    margin-bottom: 2pc;
+  }
+  .main-container .phone-mockup article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .phone-mockup article div {
+    margin-left: 10pc;
+    margin-right: 12pc;
+  }
+  .main-container .phone-mockup article div h1 {
+    font-size: 72px;
+    color: rgb(54, 83, 107);
+    font-family: "DM Serif Display", serif;
+    text-align: left;
+  }
+  .main-container .phone-mockup article div:nth-child(2) {
+    position: relative;
+    width: 445px;
+    height: 48px;
+    margin-left: 5pc;
+  }
+  .main-container .phone-mockup article div:nth-child(2) input {
+    height: 41px;
+    width: 390px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-style: none;
+    text-align: center;
+  }
+  .main-container .phone-mockup article div:nth-child(2) input:focus {
+    outline: none;
+    border-color: transparent;
+  }
+  .main-container .phone-mockup article div:nth-child(2) input::-moz-placeholder {
+    text-align: center;
+  }
+  .main-container .phone-mockup article div:nth-child(2) input::placeholder {
+    text-align: center;
+  }
+  .main-container .phone-mockup article div:nth-child(2) button {
+    width: 178px;
+    height: 42px;
+    border-style: none;
+    background-color: rgb(186, 66, 112);
+    color: white;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+  .main-container .phone-mockup article div:nth-child(2) .schedule-btn:hover {
+    background-color: rgb(218, 109, 151);
+  }
+  .main-container .phone-mockup article p {
+    color: #6c8294;
+    font-size: 15px;
+    font-family: "Public Sans";
+    margin-right: 20pc;
+  }
+  .main-container .phone-mockup img {
+    margin-right: 4pc;
+  }
+  .main-container .partners {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: #1B262F;
+    height: 472px;
+  }
+  .main-container .partners div:nth-child(2) {
+    margin-left: 1pc;
+    margin-right: 1pc;
+    flex: 0.45;
+  }
+  .main-container .partners div:nth-child(2) img {
+    margin-top: 2pc;
+    margin-right: 3pc;
+    margin-bottom: 2pc;
+    width: 129px;
+    height: 17px;
+  }
+  .main-container .partners div:nth-child(1) {
+    display: flex;
+    flex: 0.45;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin-right: 1pc;
+    margin-left: 5pc;
+  }
+  .main-container .partners div:nth-child(1) h1 {
+    font-size: 48px;
+    font-family: "DM Serif Display";
+    color: #FBFCFE;
+    margin-bottom: 1pc;
+  }
+  .main-container .partners div:nth-child(1) p {
+    font-size: 15px;
+    font-family: "Public Sans";
+    color: #FBFCFE;
+    margin-bottom: 1pc;
+    line-height: 2pc;
+    text-align: left;
+    margin-right: 4pc;
+  }
+  .main-container .partners button {
+    width: 129px;
+    height: 48px;
+    background: transparent;
+    border: solid 1px #FBFCFE;
+    color: #FBFCFE;
+    font-size: 15px;
+    border-radius: 25px;
+    margin-bottom: 3pc;
+  }
+  .main-container .implementation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 2pc;
+  }
+  .main-container .implementation div {
+    display: flex;
+  }
+  .main-container .implementation div article {
+    display: flex;
+    flex: 4;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0pc;
+    margin-right: 10pc;
+  }
+  .main-container .implementation div article img {
+    width: 445px;
+    height: 284px;
+    margin-left: 2pc;
+  }
+  .main-container .implementation div article h1 {
+    font-size: 48px;
+    color: #36536B;
+    font-family: "DM Serif Display";
+  }
+  .main-container .implementation div article p {
+    font-size: 15px;
+    color: #6C8294;
+    font-family: "Public Sans";
+    text-align: left;
+    margin-left: 2pc;
+    margin-right: 2pc;
+    line-height: 1.5pc;
+    margin-bottom: 2pc;
+  }
+  .main-container .implementation .simple {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2pc;
+  }
+  .main-container .implementation .simple article {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+  .main-container .implementation .simple article img {
+    width: 363px;
+    height: 320px;
+  }
+  .main-container .implementation .simple article h1 {
+    font-size: 48px;
+    color: #36536B;
+    font-family: "DM Serif Display";
+  }
+  .main-container .implementation .simple article p {
+    font-family: "Public Sans";
+    font-size: 15px;
+    color: #6C8294;
+    text-align: left;
+    margin-left: 8pc;
+    margin-right: 5pc;
+    margin-bottom: 2pc;
+    margin-top: 1pc;
+    line-height: 1.5pc;
+  }
+  .main-container .implementation .banking {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main-container .implementation .banking article {
+    display: flex;
+    flex: 0.32;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-right: 1pc;
+  }
+  .main-container .implementation .banking article img {
+    width: 88px;
+    height: 88px;
+    margin-bottom: 1pc;
+  }
+  .main-container .implementation .banking article h3 {
+    font-size: 18px;
+    color: #36536B;
+    font-family: "Public Sans";
+    margin-bottom: 1pc;
+  }
+  .main-container .implementation .banking article p {
+    font-size: 15px;
+    color: #6C8294;
+    font-family: "Public Sans";
+    text-align: center;
+    margin-bottom: 1pc;
+  }
+  .main-container .implementation .ready {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .main-container .implementation .ready h1 {
+    font-size: 48px;
+    color: #36536B;
+    font-family: "DM Serif Display";
+    margin-right: 12vw;
+  }
+  .main-container .implementation .ready div {
+    position: relative;
+    width: 445px;
+    height: 48px;
+  }
+  .main-container .implementation .ready div input {
+    height: 41px;
+    width: 390px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-style: none;
+    text-align: center;
+  }
+  .main-container .implementation .ready div input:focus {
+    outline: none;
+    border-color: transparent;
+  }
+  .main-container .implementation .ready div input::-moz-placeholder {
+    text-align: center;
+  }
+  .main-container .implementation .ready div input::placeholder {
+    text-align: center;
+  }
+  .main-container .implementation .ready div button {
+    width: 178px;
+    height: 42px;
+    border-style: none;
+    background-color: rgb(186, 66, 112);
+    color: white;
+    border-radius: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+  }
+  .main-container .implementation .ready div .schedule-btn:hover {
+    background-color: rgb(218, 109, 151);
+  }
+  .main-container footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    margin-top: 4pc;
+    background: #1B262F;
+  }
+  .main-container footer div {
+    display: flex;
+    align-items: center;
+    margin-right: 4pc;
+  }
+  .main-container footer div a {
+    text-decoration: none;
+    color: #FBFCFE;
+    font-size: 15px;
+    font-family: "Public Sans";
+    margin-right: 1pc;
+  }
+  .main-container footer div img {
+    margin-right: 1pc;
+  }
+}/*# sourceMappingURL=index.css.map */
