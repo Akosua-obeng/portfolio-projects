@@ -19,6 +19,7 @@ body::before {
   border-radius: 20px;
   background-repeat: no-repeat;
   transform: rotate(-90deg);
+  z-index: 1;
 }
 
 .main-container {
@@ -28,6 +29,7 @@ body::before {
 .heading {
   margin-top: 3vw;
   margin-left: 1vw;
+  z-index: 2;
 }
 .heading h1 {
   font-family: "DM Serif Display", serif;
@@ -146,11 +148,71 @@ body::before {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  body::before {
+    content: "";
+    position: absolute;
+    top: -200px;
+    right: -100px;
+    width: 700px;
+    height: 700px;
+    border-radius: 350px;
+    background-repeat: no-repeat;
+    z-index: 1;
+  }
   .main-container {
     display: flex;
     align-items: center;
     justify-content: center;
     overflow-x: hidden;
+  }
+  .main-container .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 5vh;
+    z-index: 2;
+  }
+  .main-container .header-container .logo {
+    flex: 0.4;
+    margin-right: 50vw;
+  }
+  .main-container .header-container .menu-btn {
+    flex: 0.4;
+  }
+  .main-container .header-container .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .main-container .header-container .sidebar .close {
+    margin-left: 40vw;
+    margin-top: 5vh;
+    color: #36536B;
+  }
+  .main-container .header-container .sidebar li {
+    width: 100%;
+    list-style: none;
+    text-decoration: none;
+    margin-top: 5vh;
+    margin-left: 5vw;
+    color: #0b1218;
+  }
+  .main-container .header-container .hide {
+    display: none;
+  }
+  .main-container .header-container .header-btn {
+    display: none;
   }
   .heading {
     display: flex;
@@ -159,6 +221,7 @@ body::before {
     margin-top: 10vw;
     margin-left: 14vw;
     margin-right: 14vw;
+    z-index: 1;
   }
   .heading h1 {
     font-family: "DM Serif Display", serif;
@@ -543,6 +606,7 @@ body::before {
     border-radius: 20px;
     background-repeat: no-repeat;
     transform: rotate(-90deg);
+    z-index: 1;
   }
   .main-container {
     width: 100vw;
@@ -583,6 +647,8 @@ body::before {
     font-family: "Public Sans";
     border-style: none;
     cursor: pointer;
+    position: relative;
+    z-index: 2;
   }
   .heading {
     margin-top: 3vw;

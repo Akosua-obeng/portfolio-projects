@@ -130,15 +130,14 @@ fetch('data.json')
 })
 
 // script.js
-const menuButton = document.querySelector('.menu-btn');
-const menu = document.querySelector('.navigation');
+function showSideBar(){
+    const sidebar =document.querySelector(".sidebar")
+    sidebar.style.display = 'flex'
+}
+function hideSideBar(){
+    const sidebar =document.querySelector('.sidebar')
+    sidebar.style.display = 'none'
+}
 
-menuButton.addEventListener('click', () => {
-  if (menu.style.left === '0px') {
-    menu.style.left = '-250px';
-  } else {
-    menu.style.left = '0px';
-  }
-});
 
     
